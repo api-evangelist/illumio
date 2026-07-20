@@ -1,0 +1,25 @@
+generated: '2026-07-19'
+method: searched
+source: https://product-docs-repo.illumio.com/Tech-Docs/Core/24.4/REST-APIs/out/en/index-en.html
+docs: https://docs.illumio.com/core/
+summary:
+  types: [http]
+  http_scheme: basic
+  api_key_in: [basic-auth]
+  oauth2_flows: []
+schemes:
+- name: apiKeyBasic
+  type: http
+  scheme: basic
+  description: >-
+    The Illumio PCE REST API authenticates with an organization-scoped API key
+    presented via HTTP Basic authentication: the API key ID (or a username) is
+    the Basic-auth username and the API key secret (or password) is the
+    Basic-auth password. API keys are created per user in the PCE and are scoped
+    to an organization (org_id). Session tokens are also available for
+    short-lived, browser-derived access.
+  sources: [docs]
+notes:
+- API requests are made against the customer/tenant PCE FQDN at the /api/v2 base path over HTTPS.
+- Requests are org-scoped; most collection/instance URIs embed /orgs/{org_id}/.
+- The official illumio Python client sets credentials via pce.set_credentials(api_key, api_secret).
