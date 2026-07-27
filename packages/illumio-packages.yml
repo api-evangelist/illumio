@@ -1,0 +1,37 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/illumio
+packages:
+- language: python
+  registry: pypi
+  name: illumio
+  url: https://pypi.org/project/illumio/
+  repo: https://github.com/illumio/illumio-py
+  docs: https://illumio-py.readthedocs.io/
+  install: pip install illumio
+  official: true
+  description: Official Python REST client for the Illumio PCE APIs (PolicyComputeEngine).
+- language: hcl
+  registry: terraform
+  name: illumio/illumio-core
+  url: https://registry.terraform.io/providers/illumio/illumio-core/latest
+  repo: https://github.com/illumio/terraform-provider-illumio-core
+  install: 'terraform: required_providers { illumio-core = { source = "illumio/illumio-core" } }'
+  official: true
+  description: Official Terraform provider for Illumio Core (PCE) resources.
+- language: hcl
+  registry: terraform
+  name: illumio/cloudsecure
+  url: https://registry.terraform.io/providers/illumio/cloudsecure/latest
+  repo: https://github.com/illumio/terraform-provider-illumio-cloudsecure
+  install: 'terraform: required_providers { cloudsecure = { source = "illumio/cloudsecure" } }'
+  official: true
+  description: Official Terraform provider for Illumio CloudSecure.
+- language: yaml
+  registry: ansible-galaxy
+  name: illumio.core
+  url: https://galaxy.ansible.com/ui/repo/published/illumio/core/
+  repo: https://github.com/illumio/illumio.core
+  install: ansible-galaxy collection install illumio.core
+  official: true
+  description: Illumio-certified Ansible collection for Ansible Galaxy and Ansible Automation Platform.

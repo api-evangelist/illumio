@@ -1,8 +1,17 @@
 aid: illumio
 name: Illumio
-description: Illumio is a company surfaced as a portfolio company of 8vc, a16z, accel, dcvc, general-catalyst
-  and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the
-  enrichment pipeline.
+description: >-
+  Illumio is a Zero Trust Segmentation (microsegmentation) cybersecurity company
+  whose platform stops the lateral spread of ransomware and breaches across data
+  centers, cloud, and endpoints. Its Policy Compute Engine (PCE) exposes a REST
+  API (base path /api/v2) for programmatically managing workloads, labels,
+  security policy, rulesets, IP lists, virtual services, enforcement boundaries,
+  and for querying traffic/flow (Illumination) data. Products include Illumio
+  Core for host-based data center and cloud workload segmentation, Illumio
+  CloudSecure for agentless public-cloud segmentation, and Illumio Endpoint. The
+  API is authenticated with an organization-scoped API key (key ID + secret over
+  HTTP Basic) and is accompanied by an official Python REST client, Terraform
+  providers for Illumio Core and CloudSecure, and a certified Ansible collection.
 url: https://raw.githubusercontent.com/api-evangelist/illumio/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -14,17 +23,109 @@ x-backed-by:
 - general-catalyst
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
+image: https://www.illumio.com/hubfs/Illumio_Logo.svg
 tags:
 - Company
-apis: []
+- Security
+- Cybersecurity
+- Zero Trust
+- Microsegmentation
+- Cloud Security
+- Networking
+- Workload Protection
+- Ransomware
+- Endpoint Security
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: Illumio Core PCE REST API
+  description: >-
+    The Illumio Policy Compute Engine (PCE) REST API for managing Zero Trust
+    Segmentation — workloads, labels, label groups, security policy, rulesets,
+    IP lists, services, virtual services, enforcement boundaries, pairing
+    profiles, and traffic/flow (Illumination) queries. Uses org-scoped API key
+    (key ID + secret) auth over HTTPS at the /api/v2 base path.
+  humanURL: https://docs.illumio.com/core/
+  baseURL: https://console.illum.io/api/v2
+  tags:
+  - Security
+  - Zero Trust
+  - Microsegmentation
+  - Workload Protection
+  properties:
+  - type: Documentation
+    url: https://docs.illumio.com/core/
+  - type: APIReference
+    url: https://product-docs-repo.illumio.com/Tech-Docs/Core/24.4/REST-APIs/out/en/index-en.html
+  - type: Authentication
+    url: authentication/illumio-authentication.yml
 common:
 - type: Website
   url: https://illumio.com
+- type: DeveloperPortal
+  url: https://docs.illumio.com/
+- type: Documentation
+  url: https://docs.illumio.com/core/
+- type: APIReference
+  url: https://product-docs-repo.illumio.com/Tech-Docs/Core/24.4/REST-APIs/out/en/index-en.html
+- type: GitHubOrganization
+  url: https://github.com/illumio
+- type: Blog
+  url: https://www.illumio.com/blog
+- type: Support
+  url: https://support.illumio.com/
+- type: StatusPage
+  url: https://status.illumio.com
+- type: Deprecation
+  url: lifecycle/illumio-lifecycle.yml
+- type: Pricing
+  url: https://www.illumio.com/products/pricing
+- type: SignUp
+  url: https://login.illum.io/
+- type: TermsOfService
+  url: https://www.illumio.com/legal/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.illumio.com/legal/privacy-policy
+- type: TrustCenter
+  url: security/illumio-trust-center.yml
+- type: Compliance
+  url: security/illumio-trust-center.yml
+- type: DomainSecurity
+  url: security/illumio-domain-security.yml
+- type: Packages
+  url: packages/illumio-packages.yml
+- type: SDKs
+  url: packages/illumio-packages.yml
+- type: Authentication
+  url: authentication/illumio-authentication.yml
+- type: Conventions
+  url: conventions/illumio-conventions.yml
+- type: Lifecycle
+  url: lifecycle/illumio-lifecycle.yml
+- type: Conformance
+  url: conformance/illumio-conformance.yml
+- type: LLMsTxt
+  url: llms/illumio-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

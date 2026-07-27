@@ -1,0 +1,31 @@
+# Illumio
+
+> Illumio is a Zero Trust Segmentation (microsegmentation) cybersecurity company whose Policy Compute Engine (PCE) exposes a REST API (base path /api/v2) for managing workloads, labels, security policy, rulesets, IP lists, virtual services, enforcement boundaries, and traffic/flow (Illumination) queries. Products include Illumio Core, Illumio CloudSecure, and Illumio Endpoint. Authentication is via an organization-scoped API key (key ID + secret over HTTP Basic).
+
+## APIs
+
+- [Illumio Core PCE REST API](https://docs.illumio.com/core/): Manage Zero Trust Segmentation objects and query traffic — base path /api/v2, org-scoped API-key auth.
+
+## Docs
+
+- [Developer / Product Documentation](https://docs.illumio.com/): Illumio product documentation hub.
+- [REST API Developer Guide (Core 24.4)](https://product-docs-repo.illumio.com/Tech-Docs/Core/24.4/REST-APIs/out/en/index-en.html): API categories, URIs, parameters, auth, and examples.
+- [Illumio Python client docs](https://illumio-py.readthedocs.io/): Quickstart and developer interface for the official illumio Python REST client.
+- [Support](https://support.illumio.com/): Illumio support portal.
+- [Status](https://status.illumio.com): Illumio service status page.
+
+## SDKs & Tools
+
+- [illumio (Python)](https://pypi.org/project/illumio/): Official Python REST client — pip install illumio.
+- [terraform-provider-illumio-core](https://registry.terraform.io/providers/illumio/illumio-core/latest): Official Terraform provider for Illumio Core.
+- [terraform-provider-illumio-cloudsecure](https://registry.terraform.io/providers/illumio/cloudsecure/latest): Official Terraform provider for Illumio CloudSecure.
+- [illumio.core (Ansible)](https://galaxy.ansible.com/ui/repo/published/illumio/core/): Illumio-certified Ansible collection.
+- [GitHub organization](https://github.com/illumio): Illumio open-source repositories.
+
+## Security & Trust
+
+- [Trust Center](https://trust.illumio.com/): SOC 2, ISO 27001, PCI DSS, FedRAMP, FIPS 140.
+- [Authentication profile](authentication/illumio-authentication.yml)
+- [API conventions](conventions/illumio-conventions.yml)
+- [Lifecycle](lifecycle/illumio-lifecycle.yml)
+- [Packages / SDKs](packages/illumio-packages.yml)

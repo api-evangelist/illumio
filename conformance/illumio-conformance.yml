@@ -1,0 +1,40 @@
+generated: '2026-07-19'
+method: searched
+source: https://trust.illumio.com/
+api: Illumio Core PCE REST API
+standards:
+- id: tls1.3
+  conforms: true
+  evidence: illumio.com serves TLSv1.3 (security/illumio-domain-security.yml)
+- id: http-basic-auth
+  conforms: true
+  evidence: PCE REST API authenticates via HTTP Basic with org-scoped API key ID + secret
+- id: oauth2
+  conforms: false
+  evidence: PCE REST API uses API-key/basic auth, not OAuth 2.0
+- id: openid-connect
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: errors returned as JSON token/message bodies, not application/problem+json
+- id: soc2-type2
+  conforms: true
+  evidence: published on https://trust.illumio.com/
+- id: iso-27001
+  conforms: true
+  evidence: published on https://trust.illumio.com/
+- id: pci-dss
+  conforms: true
+  evidence: published on https://trust.illumio.com/
+- id: fedramp
+  conforms: true
+  evidence: published on https://trust.illumio.com/
+- id: fips-140
+  conforms: true
+  evidence: published on https://trust.illumio.com/
+compliance_certifications:
+- SOC 2
+- ISO 27001
+- PCI DSS
+- FedRAMP
+- FIPS 140

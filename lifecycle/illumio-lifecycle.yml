@@ -1,0 +1,28 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.illumio.com/core/
+api: Illumio Core PCE REST API
+versioning:
+  scheme: uri-path
+  current: v2
+  detail: >-
+    The REST API version is carried in the URI path (/api/v2). Illumio publishes
+    a versioned REST API Developer Guide per product release (e.g. Core 21.5,
+    23.2, 24.2, 24.4) at product-docs-repo.illumio.com.
+  docs: https://product-docs-repo.illumio.com/Tech-Docs/Core/24.4/REST-APIs/out/en/index-en.html
+release_docs:
+- version: '24.4'
+  url: https://product-docs-repo.illumio.com/Tech-Docs/Core/24.4/REST-APIs/out/en/index-en.html
+- version: '24.2'
+  url: https://product-docs-repo.illumio.com/Tech-Docs/Core/PDFs/REST-API-Guide-24-2.pdf
+- version: '21.5'
+  url: https://product-docs-repo.illumio.com/Tech-Docs/Core/21.5/REST-APIs/out/en/index-en.html
+status_page: https://status.illumio.com
+sla:
+  detail: SLA/uptime commitments are provided contractually to Illumio Cloud (SaaS PCE) customers.
+deprecation:
+  policy_url: https://docs.illumio.com/core/
+  detail: >-
+    Illumio classifies APIs as public (stable) vs private/experimental in the
+    REST API Developer Guide; private APIs may change without notice. No
+    RFC 8594 Sunset/Deprecation response headers are documented.

@@ -1,0 +1,41 @@
+generated: '2026-07-19'
+method: searched
+source: https://product-docs-repo.illumio.com/Tech-Docs/Core/24.4/REST-APIs/out/en/index-en.html
+docs: https://docs.illumio.com/core/
+api: Illumio Core PCE REST API
+conventions:
+  base_path: /api/v2
+  transport: HTTPS
+  media_type: application/json
+  authentication:
+    style: http-basic
+    detail: Org-scoped API key ID (username) + secret (password); see authentication/illumio-authentication.yml
+  org_scoping:
+    style: path
+    detail: Most resource collections are nested under /orgs/{org_id}/ so requests are scoped to a PCE organization.
+  pagination:
+    style: async-collection
+    detail: >-
+      Large collection GETs (e.g. traffic flows, workloads, unpublished policy
+      objects) are served asynchronously — the client requests an async job,
+      polls the job status, then downloads the result set. Synchronous
+      collection GETs support max_results / offset style limits per the guide.
+    response_headers: [Location]
+  filtering:
+    style: query-parameters
+    detail: Collections accept typed query-parameter filters (e.g. by label, hostname, name, enforcement mode).
+  versioning:
+    style: uri-path
+    current: v2
+    detail: The API version is carried in the URI path (/api/v2). Product releases (e.g. Core 24.x) publish matching REST API Developer Guides.
+  idempotency:
+    supported: false
+    detail: >-
+      Illumio does not document a dedicated idempotency-key header. Policy
+      changes follow a draft/provision (active vs draft policy) model rather than
+      a request-idempotency contract.
+  error_envelope:
+    detail: Errors are returned with standard HTTP status codes and a JSON body describing the token/message; see errors reference in the REST API Developer Guide.
+  cross_links:
+    authentication: authentication/illumio-authentication.yml
+    lifecycle: lifecycle/illumio-lifecycle.yml
