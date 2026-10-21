@@ -27,6 +27,71 @@
   relationship: distribution-channel
   status: not-a-workflow
   arazzo: null
+- slug: illumio-pypi
+  label: PyPI
+  partner: pypi
+  partner_name: PyPI
+  category: official SDK (Python)
+  type: register
+  channel: package-registry
+  evidence: https://pypi.org/project/illumio/
+  source: edge
+  relationship: distribution-channel
+  contract_reference:
+    register: PyPI (public registry JSON)
+    spec_file: null
+    language: Python
+    packages:
+    - name: illumio
+      version: 1.1.3
+      released: '2023-02-10'
+      released_field: upload_time
+      lapsed: true
+      page: https://pypi.org/project/illumio/
+      repo_leg: github-org:illumio
+      publisher_leg: email:illumio.com
+      matched_by: domain
+    current: false
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  status: not-a-workflow
+  arazzo: null
+- slug: illumio-fedramp
+  label: FedRAMP
+  partner_name: FedRAMP
+  category: FedRAMP In Process
+  type: contract
+  channel: regulator-register
+  evidence: https://marketplace.fedramp.gov/products/FR2230244107
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: FedRAMP Marketplace data (github.com/18F/fedramp-data data/data.json @4b73d9247f)
+    standard: FedRAMP
+    spec_file: null
+    role: fedramp-in-process
+    registered_name: Illumio, Inc.
+    register_id: FR2230244107
+    matched_domain: illumio.com
+    matched_by: domain
+    domain_source: website
+    designations:
+    - In Process
+    packages:
+    - Illumio Government Cloud
+    service_models:
+    - SaaS
+    paths:
+    - Agency
+    signal_note: certified_products = one entry per AUTHORIZED impact level, never per package; packages, service
+      models, paths and leveraging agencies are context, never counted. The register lists current designations
+      only (revoked / expired are removed), so lapsed is always false
+    detected_by: sweep-gov-cloud.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
 - slug: illumio-microsoft-sentinel-own
   label: Microsoft Sentinel (own)
   partner: microsoft-sentinel
@@ -66,68 +131,29 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: illumio-fedramp
-  label: FedRAMP
-  partner_name: FedRAMP
-  category: FedRAMP In Process
-  type: contract
-  channel: regulator-register
-  evidence: https://marketplace.fedramp.gov/products/FR2230244107
+- slug: illumio-opentofu-opentofu-registry
+  label: OpenTofu (opentofu-registry)
+  partner: opentofu
+  partner_name: OpenTofu (opentofu-registry)
+  category: infrastructure-as-code provider registry listing
+  type: marketplace
+  marketplace: opentofu-registry
+  channel: partner-built
+  evidence: https://search.opentofu.org/provider/illumio/illumio-core
   source: edge
-  relationship: standard-participant
-  contract_reference:
-    register: FedRAMP Marketplace data (github.com/18F/fedramp-data data/data.json @4b73d9247f)
-    standard: FedRAMP
-    spec_file: null
-    role: fedramp-in-process
-    registered_name: Illumio, Inc.
-    register_id: FR2230244107
-    matched_domain: illumio.com
-    matched_by: domain
-    domain_source: website
-    designations:
-    - In Process
-    packages:
-    - Illumio Government Cloud
-    service_models:
-    - SaaS
-    paths:
-    - Agency
-    signal_note: certified_products = one entry per AUTHORIZED impact level, never per package; packages, service
-      models, paths and leveraging agencies are context, never counted. The register lists current designations
-      only (revoked / expired are removed), so lapsed is always false
-    detected_by: sweep-gov-cloud.py
-    detected: '2026-10-15'
+  relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: illumio-pypi
-  label: PyPI
-  partner: pypi
-  partner_name: PyPI
-  category: official SDK (Python)
-  type: register
-  channel: package-registry
-  evidence: https://pypi.org/project/illumio/
+- slug: illumio-terraform-terraform-registry
+  label: Terraform (terraform-registry)
+  partner: terraform
+  partner_name: Terraform (terraform-registry)
+  category: infrastructure-as-code provider registry listing
+  type: marketplace
+  marketplace: terraform-registry
+  channel: partner-built
+  evidence: https://registry.terraform.io/providers/illumio/illumio-core
   source: edge
-  relationship: distribution-channel
-  contract_reference:
-    register: PyPI (public registry JSON)
-    spec_file: null
-    language: Python
-    packages:
-    - name: illumio
-      version: 1.1.3
-      released: '2023-02-10'
-      released_field: upload_time
-      lapsed: true
-      page: https://pypi.org/project/illumio/
-      repo_leg: github-org:illumio
-      publisher_leg: email:illumio.com
-      matched_by: domain
-    current: false
-    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
-      24 months'
-    detected_by: sweep-official-sdks.py
-    detected: '2026-10-18'
+  relationship: platform-app
   status: not-a-workflow
   arazzo: null
