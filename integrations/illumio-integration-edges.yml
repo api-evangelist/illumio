@@ -35,6 +35,7 @@ checked:
 - https://catalog.redhat.com/api/containers/v1/vendors/label/
 - https://catalog.redhat.com/software/partners
 - https://dir.texas.gov/resource-library-item/tx-ramp-certified-cloud-products
+- ansible/integrations/ansible-integration-edges.yml
 marketplace_apps: []
 edges:
 - partner_name: AWS Marketplace
@@ -137,106 +138,6 @@ edges:
     detected: '2026-10-15'
   detected_by: sweep-gov-cloud.py
   first_seen: '2026-10-15'
-- partner_name: Microsoft Sentinel (own)
-  partner: microsoft-sentinel
-  partner_match: mirror
-  mirror_match: domain
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: own
-  evidence: https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/Illumio%20Insight
-  mirror_of: microsoft-sentinel/integrations/microsoft-sentinel-integration-edges.yml
-  apps:
-  - Illumio Insight
-  - IllumioSaaS
-  listing_count: 2
-  detected: '2026-10-14'
-  detected_by: mirror-platform-listings.py
-  category: Security - Threat Protection
-  badges:
-  - support-tier:partner
-- partner_name: Okta (own)
-  partner: okta
-  partner_match: mirror
-  mirror_match: domain
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: own
-  evidence: https://www.okta.com/integrations/illumio_saml/
-  mirror_of: okta/integrations/okta-integration-edges.yml
-  apps:
-  - Illumio ASP
-  listing_count: 1
-  detected: '2026-10-14'
-  detected_by: mirror-platform-listings.py
-  category: Single Sign-On
-  badges:
-  - OKTA_VERIFIED
-  features:
-  - SAML
-- partner_name: Palo Alto Networks (own)
-  partner: palo-alto-networks
-  partner_match: mirror
-  mirror_match: domain
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: own
-  evidence: https://cortex.marketplace.pan.dev/marketplace/details/Illumio/
-  mirror_of: palo-alto-networks/integrations/palo-alto-networks-integration-edges.yml
-  apps:
-  - Illumio Rapid Ransomware Containment
-  listing_count: 1
-  detected: '2026-10-14'
-  detected_by: mirror-platform-listings.py
-  category: Network Security
-  badges:
-  - support:partner
-- partner_name: OpenTofu (opentofu-registry)
-  partner: opentofu
-  partner_match: mirror
-  mirror_match: register
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: opentofu-registry
-  evidence: https://search.opentofu.org/provider/illumio/illumio-core
-  mirror_of: opentofu/integrations/opentofu-integration-edges.yml
-  apps:
-  - illumio/illumio-core
-  listing_count: 1
-  detected: '2026-10-21'
-  detected_by: mirror-platform-listings.py
-  category: infrastructure-as-code provider registry listing
-  badges:
-  - Verified publisher (GitHub domain-verified organization)
-- partner_name: Terraform (terraform-registry)
-  partner: terraform
-  partner_match: mirror
-  mirror_match: register
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: terraform-registry
-  evidence: https://registry.terraform.io/providers/illumio/illumio-core
-  mirror_of: terraform/integrations/terraform-integration-edges.yml
-  apps:
-  - illumio/illumio-core
-  - illumio/illumio-cloudsecure
-  listing_count: 1
-  detected: '2026-10-21'
-  detected_by: mirror-platform-listings.py
-  category: infrastructure-as-code provider registry listing
-  badges:
-  - Verified publisher (Terraform partner tier)
-  - Verified publisher (GitHub domain-verified organization)
 - partner_name: Andreessen Horowitz (a16z)
   partner: a16z
   partner_match: register
@@ -470,6 +371,125 @@ edges:
     detected: '2026-10-22'
   detected_by: sweep-tx-ramp-certified-cloud.py
   first_seen: '2026-10-22'
+- partner_name: Microsoft Sentinel (own)
+  partner: microsoft-sentinel
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/Illumio%20Insight
+  mirror_of: microsoft-sentinel/integrations/microsoft-sentinel-integration-edges.yml
+  apps:
+  - Illumio Insight
+  - IllumioSaaS
+  listing_count: 2
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: Security - Threat Protection
+  badges:
+  - support-tier:partner
+- partner_name: Okta (own)
+  partner: okta
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.okta.com/integrations/illumio_saml/
+  mirror_of: okta/integrations/okta-integration-edges.yml
+  apps:
+  - Illumio ASP
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: Single Sign-On
+  badges:
+  - OKTA_VERIFIED
+  features:
+  - SAML
+- partner_name: Palo Alto Networks (own)
+  partner: palo-alto-networks
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://cortex.marketplace.pan.dev/marketplace/details/Illumio/
+  mirror_of: palo-alto-networks/integrations/palo-alto-networks-integration-edges.yml
+  apps:
+  - Illumio Rapid Ransomware Containment
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: Network Security
+  badges:
+  - support:partner
+- partner_name: OpenTofu (opentofu-registry)
+  partner: opentofu
+  partner_match: mirror
+  mirror_match: register
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: opentofu-registry
+  evidence: https://search.opentofu.org/provider/illumio/illumio-core
+  mirror_of: opentofu/integrations/opentofu-integration-edges.yml
+  apps:
+  - illumio/illumio-core
+  listing_count: 1
+  detected: '2026-10-21'
+  detected_by: mirror-platform-listings.py
+  category: infrastructure-as-code provider registry listing
+  badges:
+  - Verified publisher (GitHub domain-verified organization)
+- partner_name: Terraform (terraform-registry)
+  partner: terraform
+  partner_match: mirror
+  mirror_match: register
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: terraform-registry
+  evidence: https://registry.terraform.io/providers/illumio/illumio-core
+  mirror_of: terraform/integrations/terraform-integration-edges.yml
+  apps:
+  - illumio/illumio-core
+  - illumio/illumio-cloudsecure
+  listing_count: 1
+  detected: '2026-10-21'
+  detected_by: mirror-platform-listings.py
+  category: infrastructure-as-code provider registry listing
+  badges:
+  - Verified publisher (Terraform partner tier)
+  - Verified publisher (GitHub domain-verified organization)
+- partner_name: Ansible (ansible-galaxy)
+  partner: ansible
+  partner_match: mirror
+  mirror_match: register
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: ansible-galaxy
+  evidence: https://galaxy.ansible.com/ui/repo/published/illumio/core/
+  mirror_of: ansible/integrations/ansible-integration-edges.yml
+  apps:
+  - illumio.core
+  listing_count: 1
+  detected: '2026-10-22'
+  detected_by: mirror-platform-listings.py
+  category: configuration-management content listing (Ansible collection)
+  badges:
+  - Verified publisher (GitHub domain-verified organization)
 source:
 - microsoft-sentinel/integrations/microsoft-sentinel-integration-edges.yml
 - okta/integrations/okta-integration-edges.yml
