@@ -64,6 +64,95 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Illumio is a company surfaced as a portfolio company of 8vc, a16z, accel, dcvc, general-catalyst and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Illumio is a Zero Trust Segmentation (microsegmentation) cybersecurity company whose platform stops the lateral spread of ransomware and breaches across data centers, cloud, and endpoints. Its Policy Compute Engine (PCE) exposes a REST API (base path /api/v2) for programmatically managing workloads, labels, security policy, rulesets, IP lists, virtual services, enforcement boundaries, and for querying traffic/flow (Illumination) data. Products include Illumio Core for host-based data center and cloud workload segmentation, Illumio CloudSecure for agentless public-cloud segmentation, and Illumio Endpoint. The API is authenticated with an organization-scoped API key (key ID + secret over HTTP Basic) and is accompanied by an official Python REST client, Terraform providers for Illumio Core and CloudSecure, and a certified Ansible collection.
 
-Backed by: 8vc, a16z, accel, dcvc, general-catalyst — https://illumio.com
+**Areas:** Company · Security · Cybersecurity · Zero Trust · Microsegmentation · Cloud Security · Networking · Workload Protection · Ransomware · Endpoint Security
+
+## Illumio on APIs.io
+
+Everything profiled for Illumio is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/illumio/](https://apis.io/providers/illumio/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Illumio Core PCE REST API](https://apis.io/apis/illumio/illumio-core-pce-rest-api/) — The Illumio Policy Compute Engine (PCE) REST API for managing Zero Trust Segmentation — workloads, labels, label groups, security policy, rulesets, IP…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Illumio Authentication](https://apis.io/security/illumio/illumio-authentication/)
+- [Illumio Domain Security](https://apis.io/security/illumio/illumio-domain-security/)
+- [Illumio Trust Center](https://apis.io/security/illumio/illumio-trust-center/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://illumio.com)
+- [Documentation](https://docs.illumio.com/core/)
+- [API reference](https://product-docs-repo.illumio.com/Tech-Docs/Core/24.4/REST-APIs/out/en/index-en.html)
+- [Pricing](https://www.illumio.com/products/pricing)
+- [Sign up](https://login.illum.io/)
+- [Support](https://support.illumio.com/)
+- [Blog](https://www.illumio.com/blog)
+- [Terms of service](https://www.illumio.com/legal/terms-of-service)
+- [Privacy policy](https://www.illumio.com/legal/privacy-policy)
+- [GitHub](https://github.com/illumio)
+- [Status](https://status.illumio.com)
+
+## API Evangelist rating
+
+**Kin Score 30.9** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 47.6 |
+| Access clarity | 39.5 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 25.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/illumio/](https://apis.io/providers/illumio/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Illumio: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/illumio/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
